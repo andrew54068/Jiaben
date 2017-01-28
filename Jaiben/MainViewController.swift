@@ -9,9 +9,17 @@
 import UIKit
 
 class MainViewController: UIViewController {
-
+    
+    var blurEffectView: UIVisualEffectView?
+    
+    @IBAction func unwindSegue(segue: UIStoryboardSegue){
+        if segue.identifier == "unwindMenu"{
+            let destinationViewController = segue.destinationViewController as! MainViewController
+            destinationViewController.blurEffectView!.removeFromSuperview()
+        }
+    }
+    
     override func viewDidLoad() {
-        
         super.viewDidLoad()
         
         //設定背景漸層
@@ -31,7 +39,19 @@ class MainViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "showMenu" {
+            let sourceViewController = segue.sourceViewController as! MainViewController
+            let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.Dark)
+            blurEffectView = UIVisualEffectView(effect: blurEffect)
+            blurEffectView?.frame = self.view.bounds
+            sourceViewController.view.addSubview(blurEffectView!)
+            sourceViewController.view.bringSubviewToFront(blurEffectView!)
+        }
+    }
 
+    
 
 }
 

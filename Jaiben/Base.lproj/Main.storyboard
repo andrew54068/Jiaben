@@ -12,7 +12,7 @@
         <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="Jaiben" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainViewController" id="BYZ-38-t0r" customClass="MainViewController" customModule="Jaiben" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -76,7 +76,7 @@
                                         </constraints>
                                         <state key="normal" image="menu"/>
                                         <connections>
-                                            <segue destination="TKM-U0-MXB" kind="show" id="eOK-oi-RXR"/>
+                                            <segue destination="TKM-U0-MXB" kind="showDetail" identifier="showMenu" id="fjI-SS-HWK"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -168,10 +168,10 @@
             </objects>
             <point key="canvasLocation" x="-417" y="807"/>
         </scene>
-        <!--View Controller-->
+        <!--Menu View Controller-->
         <scene sceneID="h2D-jc-Ow5">
             <objects>
-                <viewController id="TKM-U0-MXB" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="overCurrentContext" id="TKM-U0-MXB" customClass="menuViewController" customModule="Jaiben" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="wWT-6L-MT1"/>
                         <viewControllerLayoutGuide type="bottom" id="9ei-zq-RUn"/>
@@ -191,7 +191,7 @@
                                     </imageView>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="eZu-MA-UxZ" userLabel="handsContainer">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="eZu-MA-UxZ" userLabel="handsContainer">
                                 <rect key="frame" x="0.0" y="314" width="600" height="286"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hands" translatesAutoresizingMaskIntoConstraints="NO" id="A3Z-2o-CiA">
@@ -423,7 +423,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="QGl-LE-C1C" userLabel="lowLabel">
-                                <rect key="frame" x="125" y="394" width="19" height="22"/>
+                                <rect key="frame" x="129" y="394" width="19" height="22"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="低" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ane-hb-Pec">
                                         <rect key="frame" x="0.0" y="0.0" width="19" height="22"/>
@@ -502,7 +502,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="bLS-Bs-tWc" userLabel="nearLabel">
-                                <rect key="frame" x="126" y="454" width="18" height="22"/>
+                                <rect key="frame" x="130" y="454" width="18" height="22"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="近" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="spq-CH-7no">
                                         <rect key="frame" x="0.0" y="0.0" width="18" height="22"/>
@@ -571,13 +571,59 @@
                                     <constraint firstItem="cDF-Vc-fSC" firstAttribute="centerY" secondItem="Drk-mV-jSN" secondAttribute="centerY" id="sAh-Uy-Oyw"/>
                                 </constraints>
                             </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="WRP-iw-ZQR" userLabel="comfirmbuttom">
+                                <rect key="frame" x="219" y="512" width="162" height="34"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AfF-pQ-0IY">
+                                        <rect key="frame" x="0.0" y="0.0" width="162" height="34"/>
+                                        <color key="backgroundColor" red="0.9137254901960784" green="0.42201542075163395" blue="0.13530018127042481" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="就決定是">
+                                                    <attributes>
+                                                        <color key="NSBackgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <font key="NSFont" size="16" name="AppleSDGothicNeo-Regular"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                                <fragment content="你">
+                                                    <attributes>
+                                                        <color key="NSBackgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <font key="NSFont" size="16" name="PingFangTC-Regular"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                                <fragment content="了！">
+                                                    <attributes>
+                                                        <color key="NSBackgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <font key="NSFont" size="16" name="AppleSDGothicNeo-Regular"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="kGa-Fb-VAJ" kind="unwind" identifier="unwindMenu" unwindAction="unwindSegue:" id="gUk-Qd-F3S"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="g4m-Um-Sdc" firstAttribute="centerY" secondItem="262-rp-kan" secondAttribute="centerY" id="0B1-O7-qDi"/>
                             <constraint firstItem="PD5-8L-faY" firstAttribute="height" secondItem="nf6-xJ-YJW" secondAttribute="height" multiplier="0.75" id="0BO-be-J5O"/>
+                            <constraint firstItem="WRP-iw-ZQR" firstAttribute="width" secondItem="262-rp-kan" secondAttribute="width" multiplier="0.6" id="0cI-oT-1Z2"/>
                             <constraint firstItem="bLS-Bs-tWc" firstAttribute="centerX" secondItem="QGl-LE-C1C" secondAttribute="centerX" id="3sS-Vp-qDv"/>
-                            <constraint firstItem="QGl-LE-C1C" firstAttribute="centerX" secondItem="262-rp-kan" secondAttribute="centerX" multiplier="0.45" id="5HS-Uo-h86"/>
+                            <constraint firstItem="QGl-LE-C1C" firstAttribute="centerX" secondItem="262-rp-kan" secondAttribute="centerX" multiplier="0.46" id="5HS-Uo-h86"/>
                             <constraint firstItem="QNG-zH-O3T" firstAttribute="centerX" secondItem="262-rp-kan" secondAttribute="centerX" multiplier="0.45" id="6bJ-uy-zI3"/>
                             <constraint firstItem="r5d-KY-veU" firstAttribute="centerY" secondItem="FSp-9g-nec" secondAttribute="centerY" multiplier="0.4" id="6mE-Ma-8Ri"/>
                             <constraint firstItem="Wg7-d2-Nwa" firstAttribute="centerX" secondItem="tOr-w1-1Zm" secondAttribute="centerX" multiplier="0.98" priority="900" id="809-To-8aI"/>
@@ -607,6 +653,7 @@
                             <constraint firstItem="wKJ-hw-zf9" firstAttribute="centerX" secondItem="cDF-Vc-fSC" secondAttribute="centerX" id="L6M-y2-Ffn"/>
                             <constraint firstItem="QGl-LE-C1C" firstAttribute="width" secondItem="262-rp-kan" secondAttribute="width" multiplier="0.07" id="MHo-OV-Rdr"/>
                             <constraint firstItem="JpL-ld-Uj9" firstAttribute="centerX" secondItem="FSp-9g-nec" secondAttribute="centerX" id="Mx5-9r-3Zh"/>
+                            <constraint firstItem="WRP-iw-ZQR" firstAttribute="centerY" secondItem="262-rp-kan" secondAttribute="centerY" multiplier="1.75" id="NRF-Lv-lHQ"/>
                             <constraint firstItem="dhC-Gu-IgS" firstAttribute="height" secondItem="262-rp-kan" secondAttribute="height" multiplier="0.08" id="OKC-h8-3z9"/>
                             <constraint firstItem="262-rp-kan" firstAttribute="centerX" secondItem="FSp-9g-nec" secondAttribute="centerX" id="OZ3-Sw-JTD"/>
                             <constraint firstItem="vzW-qf-RXx" firstAttribute="width" secondItem="q0u-pH-wU1" secondAttribute="width" multiplier="0.85" id="PF0-b0-XjD"/>
@@ -618,6 +665,7 @@
                             <constraint firstItem="nf6-xJ-YJW" firstAttribute="width" secondItem="262-rp-kan" secondAttribute="width" multiplier="0.3" id="cSH-0B-trC"/>
                             <constraint firstItem="H12-dL-nvX" firstAttribute="centerY" secondItem="FSp-9g-nec" secondAttribute="centerY" multiplier="0.4" id="csc-Gy-RxD"/>
                             <constraint firstItem="ELi-dY-0Mg" firstAttribute="width" secondItem="QGl-LE-C1C" secondAttribute="width" id="d51-Cf-HQj"/>
+                            <constraint firstItem="WRP-iw-ZQR" firstAttribute="centerX" secondItem="262-rp-kan" secondAttribute="centerX" id="f2m-aE-58r"/>
                             <constraint firstItem="H12-dL-nvX" firstAttribute="centerX" secondItem="FSp-9g-nec" secondAttribute="centerX" multiplier="1.4" id="fVa-vM-3hn"/>
                             <constraint firstItem="Drk-mV-jSN" firstAttribute="centerY" secondItem="bLS-Bs-tWc" secondAttribute="centerY" id="gR5-k7-3nQ"/>
                             <constraint firstItem="JpL-ld-Uj9" firstAttribute="centerY" secondItem="FSp-9g-nec" secondAttribute="centerY" multiplier="0.22" id="gd9-Jb-RM0"/>
@@ -638,13 +686,14 @@
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Qs-3w-w4X" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="kGa-Fb-VAJ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="21" y="807"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="1bi-Wt-It6">
             <objects>
-                <viewController id="9fa-yU-qcz" sceneMemberID="viewController">
+                <viewController definesPresentationContext="YES" modalPresentationStyle="overCurrentContext" id="9fa-yU-qcz" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bb9-vK-5Py"/>
                         <viewControllerLayoutGuide type="bottom" id="CRs-BR-94e"/>
@@ -705,7 +754,7 @@
                                                     </button>
                                                 </subviews>
                                             </stackView>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="  拐子，您好！" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cqD-oV-3CV">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="  拐子，您好！" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cqD-oV-3CV">
                                                 <rect key="frame" x="0.0" y="88" width="88" height="35"/>
                                                 <color key="textColor" red="0.30557979060000001" green="0.30557979060000001" blue="0.30557979060000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
@@ -732,7 +781,7 @@
                                                     </button>
                                                 </subviews>
                                             </stackView>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="搜尋店家" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8qg-Sn-pGI">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="搜尋店家" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8qg-Sn-pGI">
                                                 <rect key="frame" x="5" y="38" width="60" height="15"/>
                                                 <color key="textColor" red="0.30557979060000001" green="0.30557979060000001" blue="0.30557979060000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -759,7 +808,7 @@
                                                     </button>
                                                 </subviews>
                                             </stackView>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="提交店家" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XOC-al-A5k">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="提交店家" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XOC-al-A5k">
                                                 <rect key="frame" x="5" y="52" width="60" height="16"/>
                                                 <color key="textColor" red="0.30557979060000001" green="0.30557979060000001" blue="0.30557979060000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -785,7 +834,7 @@
                                                     </button>
                                                 </subviews>
                                             </stackView>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" text="意見箱" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dBB-ik-ibW">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="top" text="意見箱" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dBB-ik-ibW">
                                                 <rect key="frame" x="12" y="52" width="46" height="26"/>
                                                 <color key="textColor" red="0.30557979060000001" green="0.30557979060000001" blue="0.30557979060000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -811,7 +860,7 @@
                                                     </button>
                                                 </subviews>
                                             </stackView>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" text="設定" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ixR-9N-GqZ">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="top" text="設定" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ixR-9N-GqZ">
                                                 <rect key="frame" x="17" y="30" width="32" height="30"/>
                                                 <color key="textColor" red="0.30557979060000001" green="0.30557979060000001" blue="0.30557979060000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
