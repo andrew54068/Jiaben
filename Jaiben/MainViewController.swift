@@ -13,14 +13,24 @@ class MainViewController: UIViewController {
     var blurEffectView: UIVisualEffectView?
     
     @IBAction func unwindSegue(segue: UIStoryboardSegue){
-        if segue.identifier == "unwindMenu"{
+//        if segue.identifier == "unwindMenu"{
             let destinationViewController = segue.destinationViewController as! MainViewController
             destinationViewController.blurEffectView!.removeFromSuperview()
-        }
+//        }
     }
+    
+//    override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
+//        for touch: AnyObject in touches {
+//            let t:UITouch = touch as! UITouch
+//            print(t.locationInView(self.view))
+//        }
+//    }
+
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        blurEffectView?.removeFromSuperview()
         
         //設定背景漸層
         let color1 = UIColor(red: 238/255, green: 110/255, blue: 73/255, alpha: 1)
@@ -41,14 +51,15 @@ class MainViewController: UIViewController {
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "showMenu" {
+        print("123")
+//        if segue.identifier == "showMenu" {
             let sourceViewController = segue.sourceViewController as! MainViewController
             let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.Dark)
             blurEffectView = UIVisualEffectView(effect: blurEffect)
             blurEffectView?.frame = self.view.bounds
             sourceViewController.view.addSubview(blurEffectView!)
             sourceViewController.view.bringSubviewToFront(blurEffectView!)
-        }
+//        }
     }
 
     
