@@ -9,36 +9,27 @@
 import UIKit
 
 class menuViewController: UIViewController {
-    @IBOutlet weak var a: UIStackView!
 
-    @IBOutlet weak var label: UILabel!
-    @IBOutlet weak var confirmButtonStackView: UIStackView!
-    @IBOutlet weak var b: UIStackView!
-    @IBOutlet weak var confirmButton: UIButton!
+
+//    func confirmButtonAction() {
+//        
+//        dismissViewControllerAnimated(true, completion: nil)
+//        
+//    }
+
+    @IBOutlet var confirmButton: newButton!
+    var counter: Int! = 1
+//    @IBOutlet weak var confirmButton: buttonControl!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        print(confirmButton.buttonType)
+        print("String(confirmbutton.dynamicType) is \(confirmButton.dynamicType)")
+//        confirmButton.addTarget(self, action: #selector(confirmButtonAction), forControlEvents: .TouchUpInside)
+//        self.confirmButton.addTarget(self.confirmButton, action: Selector("onButtonTap:"), forControlEvents: .TouchUpInside)
         print("______________________")
-//        print(confirmButton.bounds)
 //        print(confirmButton.layer.bounds)
-//        print(confirmButton.center.x)
-//        print(confirmButton.center.y)
-//        print(confirmButton.frame.origin.x)
-//        print(confirmButton.frame.origin.y)
-
-        print("self.view.frame is \(self.view.frame)")
-        print(label.frame)
-        print("self.view.bounds is \(self.view.bounds)")
-        print(a.frame)
-        print(b.frame)
-        print("confirmButtonStackView.bounds is \(confirmButtonStackView.bounds)")
-        print("confirmButtonStackView.frame.origin.x is \(confirmButtonStackView.frame.origin.x)")
-        print("confirmButtonStackView.frame.origin.y is \(confirmButtonStackView.frame.origin.y)")
-        print("confirmButtonStackView.frame is \(confirmButtonStackView.frame)")
-        print(confirmButtonStackView.layer.bounds)
-        print(confirmButtonStackView.frame)
-        print(confirmButton.layer.bounds)
         print("_________________________________")
+
         // Do any additional setup after loading the view.
     }
 
@@ -47,39 +38,73 @@ class menuViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
+//    func continueTrackingWithTouchUp(btuTouchUp: UIButton,with touches: Set<UITouch>){
+//        print(counter)
+//        for t: AnyObject in touches{
+//            let touch = t as! UITouch
+//            let touchOutside = !CGRectContainsPoint(btuTouchUp.bounds, touch.locationInView(self.view))
+//            if touchOutside {
+//                let previousTochInside = CGRectContainsPoint(btuTouchUp.bounds, touch.previousLocationInView(self.view))
+//                if previousTochInside {
+//                    print("Sending UIControlEventTouchDragExit")
+//                    btuTouchUp.sendActionsForControlEvents(.TouchDragExit)
+//                    btuTouchUp.highlighted = false
+//                    btuTouchUp.selected = false
+//                }else{
+//                    print("Sending UIControlEventTouchDragOutside")
+//                    btuTouchUp.sendActionsForControlEvents(.TouchDragOutside)
+//                }
+//            }else{
+//                let previousTouchOutside = !CGRectContainsPoint(btuTouchUp.bounds, touch.previousLocationInView(self.view))
+//                if previousTouchOutside{
+//                    print("Sending UIControlEventTouchDragEnter")
+//                    btuTouchUp.sendActionsForControlEvents(.TouchDragEnter)
+//                }else{
+//                    print("Sending UIControlEventTouchDragInside")
+//                    btuTouchUp.sendActionsForControlEvents(.TouchUpInside)
+//                }
+//                
+//            }
+//        }
+//    }
+    
 
-        super.touchesMoved(touches, withEvent: event)
-        
-        
-        for touch: AnyObject in touches {
-            let t: UITouch = touch as! UITouch
-            
-            let locationPoint: CGPoint = t.locationInView(self.view)
-            print("locationPoint is \(locationPoint)")
-            
-            let realX = (confirmButtonStackView.frame.origin.x)/600*self.view.frame.width
-            let realY = (confirmButtonStackView.frame.origin.y)/600*self.view.frame.height
-            let realWidth = (confirmButtonStackView.bounds.width)/600*self.view.frame.width
-            let realHeigh = (confirmButtonStackView.bounds.width)/600*self.view.frame.height
-            
-            print("realX is \(realX)")
-            print("realY is \(realY)")
-            print("self.view.frame is \(self.view.frame)")
-            print("confirmButtonStackView.frame is \(confirmButtonStackView.frame)")
-            print("confirmButtonStackView.bounds is \(confirmButtonStackView.bounds)")
-            
-            let confirmButtonStackViewRect = CGRect(x: realX, y: realY, width: realWidth, height: realHeigh)
-            
-            if (CGRectContainsPoint(confirmButtonStackViewRect, locationPoint)){
-                print("!!!!!!!!!")
-                
-            }else{
-                print("touchesEnded | This is not an confirmButtton")
-                confirmButton.selected = false
-            }
-        }
-    }
+    
+//    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+//
+//        super.touchesMoved(touches, withEvent: event)
+//        
+//        
+//        for touch: AnyObject in touches {
+//            let t: UITouch = touch as! UITouch
+//            
+//            let locationPoint: CGPoint = t.locationInView(self.view)
+//            print("locationPoint is \(locationPoint)")
+//            
+////            let realX = (confirmButtonStackView.frame.origin.x)/600*self.view.frame.width
+////            let realY = (confirmButtonStackView.frame.origin.y)/600*self.view.frame.height
+////            let realWidth = (confirmButtonStackView.bounds.width)/600*self.view.frame.width
+////            let realHeigh = (confirmButtonStackView.bounds.width)/600*self.view.frame.height
+//            print("confirmButton.frame is \(confirmButton.frame)")
+//            print("label.frame is \(label.frame)")
+//            print("self.view.frame is \(self.view.frame)")
+//            print("confirmButtonStackView.frame is \(confirmButtonStackView.frame)")
+//            print("confirmButtonStackView.bounds is \(confirmButtonStackView.bounds)")
+//            
+//            let confirmButtonStackViewRect = CGRect(x: confirmButtonStackView.frame.origin.x, y: confirmButtonStackView.frame.origin.y, width: confirmButtonStackView.bounds.width, height: confirmButtonStackView.bounds.height)
+//            
+//            if (CGRectContainsPoint(confirmButtonStackViewRect, locationPoint)){
+//                print("!!!!!!!!!")
+////                confirmButton.touchesCancelled
+//                
+//            }else{
+//                print("touchesEnded | This is not an confirmButtton")
+//                confirmButton.selected = false
+//                confirmButton.highlighted = false
+//                
+//            }
+//        }
+//    }
     /*
     // MARK: - Navigation
 
