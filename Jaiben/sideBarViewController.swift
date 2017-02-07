@@ -1,29 +1,31 @@
 //
-//  menuViewController.swift
+//  sideBarViewController.swift
 //  Jaiben
 //
-//  Created by kidnapper on 26/01/2017.
+//  Created by kidnapper on 04/02/2017.
 //  Copyright © 2017 JaiBen. All rights reserved.
 //
 
 import UIKit
 
-class menuViewController: UIViewController {
+class sideBarViewController: UIViewController {
 
-
-//    func confirmButtonAction() {
-//        
-//        dismissViewControllerAnimated(true, completion: nil)
-//        
-//    }
-
-    @IBOutlet var confirmButton: newButton!
-    var counter: Int! = 1
-//    @IBOutlet weak var confirmButton: buttonControl!
+    var Switch: Bool = false
+    @IBOutlet var bell: newButton!
+    
+    @IBAction func sideBarSwitch(sender: AnyObject) {
+        let mainViewCOntroller = MainViewController()
+        guard Switch else{
+            mainViewCOntroller.switchOnSideBar()
+            Switch = true
+            return
+        }
+        mainViewCOntroller.switchOffSideBar()
+        Switch = false
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(confirmButton.buttonType)
-        print("String(confirmbutton.dynamicType) is \(confirmButton.dynamicType)")
 
         // Do any additional setup after loading the view.
     }
@@ -32,6 +34,8 @@ class menuViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+
     /*
     // MARK: - Navigation
 
