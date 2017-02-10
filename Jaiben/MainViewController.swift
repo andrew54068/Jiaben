@@ -15,6 +15,16 @@ class MainViewController: UIViewController {
     var sideBarSwitch = true
     
 
+    @IBAction func EdgePan(sender: AnyObject) {
+        if let touch = sender as? UITouch{
+            print(touch)
+        }
+        print(sender.dynamicType)
+        print("@@@@@@@@@@@@@")
+        switchOnSideBar()
+        sideBarSwitch = false
+    }
+
     @IBOutlet var bell: newButton!
     @IBOutlet var sideBar: UIView!
     
@@ -31,10 +41,12 @@ class MainViewController: UIViewController {
         print("sideBarSwitch = \(sideBarSwitch)")
     }
     @IBAction func unwindSegue(segue: UIStoryboardSegue){
-//        if segue.identifier == "unwindMenu"{
+        if segue.identifier == "unwindMenu"{
             let destinationViewController = segue.destinationViewController as! MainViewController
             destinationViewController.blurEffectView!.removeFromSuperview()
-//        }
+        }else if segue.identifier == "unwindOutcome"{
+            
+        }
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,9 +62,7 @@ class MainViewController: UIViewController {
         gradient.startPoint = CGPoint(x: 0,y: 0)
         gradient.endPoint = CGPoint(x: 1, y: 1)
         self.view.layer.insertSublayer(gradient, atIndex: 0)
-        UIView.animateWithDuration(0.4, delay: 0.0, options: [], animations: {
-            self.sideBar!.transform = CGAffineTransformMakeTranslation(-self.view.bounds.width * 0.4, 0)
-            }, completion: nil)
+        self.sideBar!.transform = CGAffineTransformMakeTranslation(-self.view.bounds.width * 0.4, 0)
         
         // Do any additional setup after loading the view, typically from a nib.
     }
