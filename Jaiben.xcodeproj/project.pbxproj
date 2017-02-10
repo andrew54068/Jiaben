@@ -12,11 +12,11 @@
 		6D6ADD031E338CCE00D19F0C /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6ADD021E338CCE00D19F0C /* MainViewController.swift */; };
 		6D6ADD061E338CCE00D19F0C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D6ADD041E338CCE00D19F0C /* Main.storyboard */; };
 		6D6ADD091E338CCE00D19F0C /* Jaiben.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6D6ADD071E338CCE00D19F0C /* Jaiben.xcdatamodeld */; };
-		6D6ADD0B1E338CCE00D19F0C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D6ADD0A1E338CCE00D19F0C /* Assets.xcassets */; };
 		6D6ADD0E1E338CCE00D19F0C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D6ADD0C1E338CCE00D19F0C /* LaunchScreen.storyboard */; };
 		6D739F391E4629E7007B5F21 /* sideBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D739F381E4629E7007B5F21 /* sideBarViewController.swift */; };
 		6D962D251E397E9B00DCE233 /* menuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D962D241E397E9B00DCE233 /* menuViewController.swift */; };
 		6DB83CAE1E4D3B8600CD6870 /* outcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB83CAD1E4D3B8600CD6870 /* outcomeViewController.swift */; };
+		6DB83CB01E4D676400CD6870 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6DB83CAF1E4D676400CD6870 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,12 +26,12 @@
 		6D6ADD021E338CCE00D19F0C /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		6D6ADD051E338CCE00D19F0C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6D6ADD081E338CCE00D19F0C /* Jaiben.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Jaiben.xcdatamodel; sourceTree = "<group>"; };
-		6D6ADD0A1E338CCE00D19F0C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6D6ADD0D1E338CCE00D19F0C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6D6ADD0F1E338CCE00D19F0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6D739F381E4629E7007B5F21 /* sideBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sideBarViewController.swift; sourceTree = "<group>"; };
 		6D962D241E397E9B00DCE233 /* menuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = menuViewController.swift; sourceTree = "<group>"; };
 		6DB83CAD1E4D3B8600CD6870 /* outcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = outcomeViewController.swift; sourceTree = "<group>"; };
+		6DB83CAF1E4D676400CD6870 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,10 +64,10 @@
 		6D6ADCFF1E338CCE00D19F0C /* Jaiben */ = {
 			isa = PBXGroup;
 			children = (
+				6DB83CAF1E4D676400CD6870 /* Assets.xcassets */,
 				6D6ADD001E338CCE00D19F0C /* AppDelegate.swift */,
 				6D6ADD021E338CCE00D19F0C /* MainViewController.swift */,
 				6D6ADD041E338CCE00D19F0C /* Main.storyboard */,
-				6D6ADD0A1E338CCE00D19F0C /* Assets.xcassets */,
 				6D6ADD0C1E338CCE00D19F0C /* LaunchScreen.storyboard */,
 				6D6ADD0F1E338CCE00D19F0C /* Info.plist */,
 				6D6ADD071E338CCE00D19F0C /* Jaiben.xcdatamodeld */,
@@ -139,7 +139,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6D6ADD0E1E338CCE00D19F0C /* LaunchScreen.storyboard in Resources */,
-				6D6ADD0B1E338CCE00D19F0C /* Assets.xcassets in Resources */,
+				6DB83CB01E4D676400CD6870 /* Assets.xcassets in Resources */,
 				6D6ADD061E338CCE00D19F0C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
