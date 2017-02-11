@@ -139,13 +139,13 @@
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="宇和" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SUP-4T-zYh" userLabel="name_Label">
                                 <rect key="frame" x="131" y="96" width="58" height="34"/>
                                 <fontDescription key="fontDescription" name="DFPiPi-W5-WIN-BF" family="DFPiPiW5-B5" pointSize="29"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="拐子" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nxl-JR-gU7" userLabel="nickname_Label">
                                 <rect key="frame" x="146" y="132" width="28" height="17"/>
                                 <fontDescription key="fontDescription" name="DFPiPi-W5-WIN-BF" family="DFPiPiW5-B5" pointSize="14"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="BHN-9P-Htj" userLabel="roleContainer">
@@ -173,13 +173,13 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="拐子" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Xj-tp-Kk5" userLabel="name1_Label">
                                 <rect key="frame" x="131" y="321" width="58" height="34"/>
                                 <fontDescription key="fontDescription" name="DFPiPi-W5-WIN-BF" family="DFPiPiW5-B5" pointSize="29"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="andrew0424718012@yahoo.com.tw" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gjh-Lk-e3I" userLabel="email_Label">
                                 <rect key="frame" x="77" y="374" width="166" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LQ4-I4-UsC" customClass="newButton" customModule="Jaiben" customModuleProvider="target">
@@ -339,7 +339,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="意見箱" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uaq-Uv-fBu" userLabel="title">
                                 <rect key="frame" x="115" y="110" width="90" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aSh-RL-Kpy" userLabel="content">
@@ -415,7 +415,99 @@
                     <view key="view" contentMode="scaleToFill" id="A14-XF-HCr">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="JYn-XC-68R" userLabel="about_jbContainer">
+                                <rect key="frame" x="41" y="28" width="238" height="512"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="about_jb" translatesAutoresizingMaskIntoConstraints="NO" id="qBI-4c-2jd">
+                                        <rect key="frame" x="0.0" y="0.0" width="238" height="512"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="qBI-4c-2jd" secondAttribute="height" multiplier="1622:3484" id="7Yv-Pa-uxP"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="關於甲奔" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kf7-dy-fBq">
+                                <rect key="frame" x="108" y="109" width="104" height="31"/>
+                                <fontDescription key="fontDescription" name="DFPiPi-W5-WIN-BF" family="DFPiPiW5-B5" pointSize="26"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2mA-HH-VnX" customClass="newButton" customModule="Jaiben" customModuleProvider="target">
+                                <rect key="frame" x="65" y="465" width="190" height="25"/>
+                                <color key="backgroundColor" red="0.0" green="0.67450980392156867" blue="0.76470588235294112" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="DFPiPi-W5-WIN-BF" family="DFPiPiW5-B5" pointSize="18"/>
+                                <state key="normal" title="加入我們">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ex7-H4-EZl">
+                                <rect key="frame" x="65" y="494" width="190" height="25"/>
+                                <color key="backgroundColor" red="0.79607843140000001" green="0.79607843140000001" blue="0.79607843140000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="DFPiPi-W5-WIN-BF" family="DFPiPiW5-B5" pointSize="18"/>
+                                <state key="normal" title="返回">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我們都是愛吃的師大人" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WK0-XV-HKg" userLabel="Label1">
+                                <rect key="frame" x="75" y="245" width="170" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我們能解決擇食的困擾" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jae-0n-RvC" userLabel="Label2">
+                                <rect key="frame" x="75" y="302" width="170" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我們提供貼近需求的選擇" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RQu-Iv-apT" userLabel="Label3">
+                                <rect key="frame" x="67" y="376" width="187" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我們是屬於師大人的甲奔" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uth-gC-eKn" userLabel="Label4">
+                                <rect key="frame" x="67" y="433" width="187" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ex7-H4-EZl" firstAttribute="centerX" secondItem="JYn-XC-68R" secondAttribute="centerX" id="1Xz-g8-8hb"/>
+                            <constraint firstItem="WK0-XV-HKg" firstAttribute="centerX" secondItem="JYn-XC-68R" secondAttribute="centerX" id="871-yy-9x1"/>
+                            <constraint firstItem="RQu-Iv-apT" firstAttribute="centerX" secondItem="JYn-XC-68R" secondAttribute="centerX" id="AZf-0n-Msk"/>
+                            <constraint firstItem="2mA-HH-VnX" firstAttribute="height" secondItem="JYn-XC-68R" secondAttribute="height" multiplier="0.05" id="Esl-mF-PUY"/>
+                            <constraint firstItem="Jae-0n-RvC" firstAttribute="centerX" secondItem="JYn-XC-68R" secondAttribute="centerX" id="GSe-Zb-KOW"/>
+                            <constraint firstItem="JYn-XC-68R" firstAttribute="centerX" secondItem="A14-XF-HCr" secondAttribute="centerX" id="KjX-qN-4Zt"/>
+                            <constraint firstItem="RQu-Iv-apT" firstAttribute="centerY" secondItem="JYn-XC-68R" secondAttribute="centerY" multiplier="1.36" id="Q3e-61-VNo"/>
+                            <constraint firstItem="2mA-HH-VnX" firstAttribute="width" secondItem="JYn-XC-68R" secondAttribute="width" multiplier="0.8" id="S4n-L4-9iV"/>
+                            <constraint firstItem="ex7-H4-EZl" firstAttribute="width" secondItem="JYn-XC-68R" secondAttribute="width" multiplier="0.8" id="ZQt-Du-0KU"/>
+                            <constraint firstItem="JYn-XC-68R" firstAttribute="height" secondItem="A14-XF-HCr" secondAttribute="height" multiplier="0.9" id="h9A-28-sr8"/>
+                            <constraint firstItem="ex7-H4-EZl" firstAttribute="centerY" secondItem="JYn-XC-68R" secondAttribute="centerY" multiplier="1.78" id="j27-5f-cb8"/>
+                            <constraint firstItem="kf7-dy-fBq" firstAttribute="centerX" secondItem="JYn-XC-68R" secondAttribute="centerX" id="lj8-2O-gjn"/>
+                            <constraint firstItem="2mA-HH-VnX" firstAttribute="centerY" secondItem="JYn-XC-68R" secondAttribute="centerY" multiplier="1.68" id="m6i-tx-lkT"/>
+                            <constraint firstItem="kf7-dy-fBq" firstAttribute="centerY" secondItem="JYn-XC-68R" secondAttribute="centerY" multiplier="0.44" id="m9h-BA-G4D"/>
+                            <constraint firstItem="uth-gC-eKn" firstAttribute="centerY" secondItem="JYn-XC-68R" secondAttribute="centerY" multiplier="1.56" id="qdg-UW-uom"/>
+                            <constraint firstItem="uth-gC-eKn" firstAttribute="centerX" secondItem="JYn-XC-68R" secondAttribute="centerX" id="quA-qV-xVY"/>
+                            <constraint firstItem="ex7-H4-EZl" firstAttribute="height" secondItem="JYn-XC-68R" secondAttribute="height" multiplier="0.05" id="r0f-Jp-rbG"/>
+                            <constraint firstItem="WK0-XV-HKg" firstAttribute="centerY" secondItem="JYn-XC-68R" secondAttribute="centerY" multiplier="0.9" id="rVs-NS-8uc"/>
+                            <constraint firstItem="Jae-0n-RvC" firstAttribute="centerY" secondItem="JYn-XC-68R" secondAttribute="centerY" multiplier="1.1" id="rqH-iR-hun"/>
+                            <constraint firstItem="JYn-XC-68R" firstAttribute="centerY" secondItem="A14-XF-HCr" secondAttribute="centerY" id="wdV-gC-hRG"/>
+                            <constraint firstItem="2mA-HH-VnX" firstAttribute="centerX" secondItem="JYn-XC-68R" secondAttribute="centerX" id="xmu-9n-AOR"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kkp-fA-qoS" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1521,6 +1613,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="about_jb" width="540" height="1161"/>
         <image name="about_us" width="98" height="54"/>
         <image name="address" width="83" height="107"/>
         <image name="advice" width="119" height="88"/>
