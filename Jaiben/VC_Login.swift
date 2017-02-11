@@ -1,14 +1,14 @@
 //
-//  outcomeViewController.swift
+//  VC_Login.swift
 //  Jaiben
 //
-//  Created by kidnapper on 10/02/2017.
+//  Created by kidnapper on 11/02/2017.
 //  Copyright © 2017 JaiBen. All rights reserved.
 //
 
 import UIKit
 
-class outcomeViewController: VC_Base {
+class VC_Login: VC_Base {
 
     override func viewDidLoad() {
         super.viewDidLoad()
