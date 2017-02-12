@@ -10,6 +10,7 @@
 		6D0F7AC71E4168F500263B7B /* newButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0F7AC61E4168F500263B7B /* newButton.swift */; };
 		6D4017E21E4E2042008A4A36 /* VC_Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D4017E11E4E2042008A4A36 /* VC_Base.swift */; };
 		6D4017E41E4ED7DE008A4A36 /* VC_Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D4017E31E4ED7DE008A4A36 /* VC_Login.swift */; };
+		6D4BEA3E1E4FEB6900BD1550 /* sideBarTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D4BEA3C1E4FEB6900BD1550 /* sideBarTab.storyboard */; };
 		6D6ADD011E338CCE00D19F0C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6ADD001E338CCE00D19F0C /* AppDelegate.swift */; };
 		6D6ADD031E338CCE00D19F0C /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6ADD021E338CCE00D19F0C /* MainViewController.swift */; };
 		6D6ADD061E338CCE00D19F0C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D6ADD041E338CCE00D19F0C /* Main.storyboard */; };
@@ -25,6 +26,7 @@
 		6D0F7AC61E4168F500263B7B /* newButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = newButton.swift; sourceTree = "<group>"; };
 		6D4017E11E4E2042008A4A36 /* VC_Base.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VC_Base.swift; sourceTree = "<group>"; };
 		6D4017E31E4ED7DE008A4A36 /* VC_Login.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VC_Login.swift; sourceTree = "<group>"; };
+		6D4BEA3D1E4FEB6900BD1550 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/sideBarTab.storyboard; sourceTree = "<group>"; };
 		6D6ADCFD1E338CCE00D19F0C /* Jaiben.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jaiben.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D6ADD001E338CCE00D19F0C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6D6ADD021E338CCE00D19F0C /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 				6D6ADD001E338CCE00D19F0C /* AppDelegate.swift */,
 				6D6ADD021E338CCE00D19F0C /* MainViewController.swift */,
 				6D6ADD041E338CCE00D19F0C /* Main.storyboard */,
+				6D4BEA3C1E4FEB6900BD1550 /* sideBarTab.storyboard */,
 				6D6ADD0C1E338CCE00D19F0C /* LaunchScreen.storyboard */,
 				6D6ADD0F1E338CCE00D19F0C /* Info.plist */,
 				6D6ADD071E338CCE00D19F0C /* Jaiben.xcdatamodeld */,
@@ -153,6 +156,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6D6ADD0E1E338CCE00D19F0C /* LaunchScreen.storyboard in Resources */,
+				6D4BEA3E1E4FEB6900BD1550 /* sideBarTab.storyboard in Resources */,
 				6DB83CB01E4D676400CD6870 /* Assets.xcassets in Resources */,
 				6D6ADD061E338CCE00D19F0C /* Main.storyboard in Resources */,
 			);
@@ -180,6 +184,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		6D4BEA3C1E4FEB6900BD1550 /* sideBarTab.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6D4BEA3D1E4FEB6900BD1550 /* Base */,
+			);
+			name = sideBarTab.storyboard;
+			sourceTree = "<group>";
+		};
 		6D6ADD041E338CCE00D19F0C /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
