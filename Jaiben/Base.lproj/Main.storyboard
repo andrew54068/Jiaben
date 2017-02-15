@@ -618,6 +618,12 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XOA-fZ-qGg" userLabel="news">
+                                <rect key="frame" x="58" y="457" width="194" height="41"/>
+                                <fontDescription key="fontDescription" name="DFPOP1-Bd-HK-BF" family="DFPOP1W7-B5" pointSize="18"/>
+                                <color key="textColor" red="0.30557979060000001" green="0.30557979060000001" blue="0.30557979060000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.91372549020000005" green="0.42201542079999999" blue="0.13530018129999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -626,6 +632,7 @@
                             <constraint firstItem="duQ-qp-kWX" firstAttribute="top" secondItem="BDG-zq-SRQ" secondAttribute="bottom" multiplier="1.01" id="3ek-lA-3nn"/>
                             <constraint firstItem="duQ-qp-kWX" firstAttribute="centerX" secondItem="BDG-zq-SRQ" secondAttribute="centerX" id="65P-cY-Ng9"/>
                             <constraint firstItem="wLq-DD-BnW" firstAttribute="centerX" secondItem="LhS-8g-sKS" secondAttribute="centerX" id="7Xw-XJ-PIp"/>
+                            <constraint firstItem="XOA-fZ-qGg" firstAttribute="height" secondItem="rWj-uo-nZA" secondAttribute="height" multiplier="0.5" id="9V4-lK-Yp7"/>
                             <constraint firstItem="NDk-7z-cnr" firstAttribute="centerX" secondItem="rWj-uo-nZA" secondAttribute="centerX" multiplier="1.8" id="AWX-n3-Wl5"/>
                             <constraint firstItem="9VT-N4-ffm" firstAttribute="height" secondItem="edV-wt-uWw" secondAttribute="height" multiplier="0.06" id="Bnp-7c-n52"/>
                             <constraint firstItem="IsK-Rr-ESv" firstAttribute="top" secondItem="wRd-Pe-R0o" secondAttribute="bottom" multiplier="1.01" id="C92-a6-rz6"/>
@@ -636,6 +643,7 @@
                             <constraint firstItem="wLq-DD-BnW" firstAttribute="top" secondItem="LhS-8g-sKS" secondAttribute="bottom" multiplier="1.01" id="NgE-4K-4Nb"/>
                             <constraint firstItem="2VQ-lY-Meg" firstAttribute="centerY" secondItem="Ae4-Wh-PZM" secondAttribute="centerY" multiplier="1.12" id="Nx8-eK-uft"/>
                             <constraint firstItem="yfd-Zp-reG" firstAttribute="centerX" secondItem="IsO-C8-Jn4" secondAttribute="centerX" id="Uex-3L-eYS"/>
+                            <constraint firstItem="XOA-fZ-qGg" firstAttribute="width" secondItem="rWj-uo-nZA" secondAttribute="width" multiplier="0.68" id="Vb9-iv-HcT"/>
                             <constraint firstItem="2VQ-lY-Meg" firstAttribute="centerX" secondItem="Ae4-Wh-PZM" secondAttribute="centerX" id="VeB-2o-byf"/>
                             <constraint firstItem="LhS-8g-sKS" firstAttribute="bottom" secondItem="edV-wt-uWw" secondAttribute="centerY" multiplier="1.41" id="Vlf-OU-zlh"/>
                             <constraint firstItem="Tdh-ch-Nmh" firstAttribute="centerY" secondItem="Ae4-Wh-PZM" secondAttribute="centerY" multiplier="0.69" id="WyJ-KV-659"/>
@@ -661,10 +669,12 @@
                             <constraint firstItem="IsK-Rr-ESv" firstAttribute="centerX" secondItem="wRd-Pe-R0o" secondAttribute="centerX" id="rH6-ft-KWU"/>
                             <constraint firstItem="bKk-2C-67F" firstAttribute="top" secondItem="uCq-QT-Ywj" secondAttribute="bottom" id="rSz-l1-OdU"/>
                             <constraint firstItem="rWj-uo-nZA" firstAttribute="centerY" secondItem="edV-wt-uWw" secondAttribute="centerY" multiplier="1.7" id="rj3-37-Evm"/>
+                            <constraint firstItem="XOA-fZ-qGg" firstAttribute="centerY" secondItem="rWj-uo-nZA" secondAttribute="centerY" multiplier="0.99" id="sRb-O0-udb"/>
                             <constraint firstItem="NDk-7z-cnr" firstAttribute="centerY" secondItem="rWj-uo-nZA" secondAttribute="centerY" multiplier="1.015" id="w2R-dj-yKo"/>
                             <constraint firstItem="BDG-zq-SRQ" firstAttribute="bottom" secondItem="edV-wt-uWw" secondAttribute="centerY" multiplier="1.415" id="wAj-sv-BWQ"/>
                             <constraint firstItem="Ae4-Wh-PZM" firstAttribute="height" secondItem="edV-wt-uWw" secondAttribute="height" multiplier="0.48" id="x0A-ia-clP"/>
                             <constraint firstItem="rWj-uo-nZA" firstAttribute="centerX" secondItem="edV-wt-uWw" secondAttribute="centerX" multiplier="0.92" id="xMX-Tj-KkR"/>
+                            <constraint firstItem="XOA-fZ-qGg" firstAttribute="centerX" secondItem="rWj-uo-nZA" secondAttribute="centerX" multiplier="1.05" id="xRR-G2-EN0"/>
                             <constraint firstItem="BDG-zq-SRQ" firstAttribute="centerY" secondItem="edV-wt-uWw" secondAttribute="centerY" multiplier="1.33" id="zKD-VD-gfg"/>
                         </constraints>
                     </view>

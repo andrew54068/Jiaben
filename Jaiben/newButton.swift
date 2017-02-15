@@ -9,15 +9,41 @@
 import UIKit
 
 class newButton: UIButton {
+    let maskLayer = CAShapeLayer()
+    
+    
     override func continueTrackingWithTouch(touch: UITouch, withEvent event: UIEvent?) -> Bool {
         print("here")
-        let touchOutside = !CGRectContainsPoint(self.bounds, touch.locationInView(self))
-        print(touch.locationInView(self))
-        print(touch.previousLocationInView(self))
-        guard !touchOutside else{
-            self.highlighted = false
-            return false
-        }
+//        UIGraphicsBeginImageContext((self.imageView?.bounds.size)!)
+//        self.imageView?.layer.renderInContext(UIGraphicsGetCurrentContext()!)
+////        let image = UIGraphicsGetImageFromCurrentImageContext()
+//        UIGraphicsEndImageContext()
+        let bounds = self.imageView?.bounds
+        maskLayer.bounds = bounds!
+        maskLayer.path = UIBezierPath(roundedRect: (self.imageView?.bounds)!, cornerRadius: 0).CGPath
+//        if let Image = image{
+//            maskLayer.frame = Image.
+//            maskLayer.fillColor = UIColor.redColor().CGColor
+//            self.imageView?.layer.mask = maskLayer
+            print("111111")
+            let touchOutside = !CGRectContainsPoint(maskLayer.frame, touch.locationInView(self))
+//            print(touch.locationInView(self))
+//            print(touch.previousLocationInView(self))
+            guard !touchOutside else{
+                print("outside")
+                self.highlighted = false
+                return false
+            }
+        
+//        }else {
+//            let touchOutside = !CGRectContainsPoint(self.bounds, touch.locationInView(self))
+//            print(touch.locationInView(self))
+//            print(touch.previousLocationInView(self))
+//            guard !touchOutside else{
+//                self.highlighted = false
+//                return false
+//            }
+//        }
 //        if touchOutside {
 //            let previousTochInside = CGRectContainsPoint(self.bounds, touch.previousLocationInView(self))
 //            if previousTochInside {
