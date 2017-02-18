@@ -13,27 +13,26 @@ class newButton: UIButton {
     
     
     override func continueTrackingWithTouch(touch: UITouch, withEvent event: UIEvent?) -> Bool {
-        print("here")
-//        UIGraphicsBeginImageContext((self.imageView?.bounds.size)!)
-//        self.imageView?.layer.renderInContext(UIGraphicsGetCurrentContext()!)
-////        let image = UIGraphicsGetImageFromCurrentImageContext()
-//        UIGraphicsEndImageContext()
-        let bounds = self.imageView?.bounds
-        maskLayer.bounds = bounds!
-        maskLayer.path = UIBezierPath(roundedRect: (self.imageView?.bounds)!, cornerRadius: 0).CGPath
+        print("Tracking")
+
+        if let bounds = self.imageView?.bounds{
+//        maskLayer.bounds = bounds!
+//        maskLayer.path = UIBezierPath(roundedRect: (self.imageView?.bounds)!, cornerRadius: 0).CGPath
 //        if let Image = image{
 //            maskLayer.frame = Image.
 //            maskLayer.fillColor = UIColor.redColor().CGColor
 //            self.imageView?.layer.mask = maskLayer
-            print("111111")
-            let touchOutside = !CGRectContainsPoint(maskLayer.frame, touch.locationInView(self))
+            print("image exist")
+            let touchInside = CGRectContainsPoint(bounds, touch.locationInView(self))
 //            print(touch.locationInView(self))
 //            print(touch.previousLocationInView(self))
-            guard !touchOutside else{
-                print("outside")
+            guard touchInside else{
+                print("touchOutside")
                 self.highlighted = false
                 return false
             }
+            self.highlighted = true
+        }
         
 //        }else {
 //            let touchOutside = !CGRectContainsPoint(self.bounds, touch.locationInView(self))
