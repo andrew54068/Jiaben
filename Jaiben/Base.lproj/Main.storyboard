@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="o6k-bQ-IvQ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -150,7 +150,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Woi-Ta-ZLf" userLabel="lidContainer">
                                 <rect key="frame" x="96" y="237" width="130" height="95"/>
                                 <subviews>
-                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vQG-E2-g7K" userLabel="lid" customClass="newButton" customModule="Jaiben" customModuleProvider="target">
+                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vQG-E2-g7K" userLabel="lid">
                                         <rect key="frame" x="0.0" y="0.0" width="130" height="95"/>
                                         <state key="normal" image="lid"/>
                                         <connections>
@@ -398,7 +398,7 @@
                                 </connections>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.91372549020000005" green="0.42201542079999999" blue="0.13530018129999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="Woi-Ta-ZLf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" multiplier="1.01" id="0oT-XX-3Bi"/>
@@ -613,7 +613,7 @@
                                         </constraints>
                                         <state key="normal" image="back"/>
                                         <connections>
-                                            <segue destination="gg2-gf-oKo" kind="unwind" identifier="unwindOutcome" unwindAction="unwindSegue:" id="h8R-6m-W07"/>
+                                            <segue destination="gg2-gf-oKo" kind="unwind" identifier="unwindOutcome" unwindAction="unwindSegueToMainView:" id="h8R-6m-W07"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -625,7 +625,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.91372549020000005" green="0.42201542079999999" blue="0.13530018129999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="bKk-2C-67F" firstAttribute="width" secondItem="edV-wt-uWw" secondAttribute="height" multiplier="0.09" id="0qU-C2-q5V"/>
                             <constraint firstItem="bKk-2C-67F" firstAttribute="centerX" secondItem="edV-wt-uWw" secondAttribute="centerX" id="1Si-y8-Gxs"/>
@@ -1088,34 +1088,16 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="WRP-iw-ZQR" userLabel="confirmButton">
                                 <rect key="frame" x="83" y="487" width="154" height="20"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AfF-pQ-0IY" userLabel="Confirm Button" customClass="newButton" customModule="Jaiben" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AfF-pQ-0IY" userLabel="Confirm Button" customClass="newButton" customModule="Jaiben" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="154" height="20"/>
                                         <color key="backgroundColor" red="0.9137254901960784" green="0.42201542075163395" blue="0.13530018127042481" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="AfF-pQ-0IY" secondAttribute="height" multiplier="364:48" id="BVi-m3-MaS"/>
                                         </constraints>
+                                        <fontDescription key="fontDescription" name="PingFangTC-Semibold" family="PingFang TC" pointSize="18"/>
                                         <size key="titleShadowOffset" width="20" height="20"/>
-                                        <state key="normal">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content=" 就決定是你了！">
-                                                    <attributes>
-                                                        <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <font key="NSFont" size="18" name="PingFangTC-Semibold"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
-                                        </state>
-                                        <state key="highlighted">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content=" 就決定是你了！">
-                                                    <attributes>
-                                                        <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <font key="NSFont" size="18" name="PingFangTC-Semibold"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
+                                        <state key="normal" title=" 就決定是你了！">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -1123,7 +1105,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <segue destination="cGw-Qt-cD7" kind="unwind" identifier="unwindMenu" unwindAction="unwindSegue:" id="yZG-FL-HF2"/>
+                                            <segue destination="cGw-Qt-cD7" kind="unwind" identifier="unwindMenu" unwindAction="unwindSegueToMainView:" id="yZG-FL-HF2"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -1227,7 +1209,9 @@
         <!--advice_VC-->
         <scene sceneID="8Ll-Ke-U1N">
             <objects>
-                <viewControllerPlaceholder storyboardName="sideBarTab" referencedIdentifier="advice_VC" id="Jej-DL-cpp" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="sideBarTab" referencedIdentifier="advice_VC" id="Jej-DL-cpp" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="pvj-1C-tMH"/>
+                </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w1r-B2-PGl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="34" y="-430"/>

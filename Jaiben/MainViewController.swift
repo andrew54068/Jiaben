@@ -41,7 +41,7 @@ class MainViewController: VC_Base {
         sideBarSwitch = false
         print("sideBarSwitch = \(sideBarSwitch)")
     }
-    @IBAction func unwindSegue(segue: UIStoryboardSegue){
+    @IBAction func unwindSegueToMainView(segue: UIStoryboardSegue){
         if segue.identifier == "unwindMenu"{
             let destinationViewController = segue.destinationViewController as! MainViewController
             destinationViewController.blurEffectView!.removeFromSuperview()
@@ -67,7 +67,7 @@ class MainViewController: VC_Base {
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        print("123")
+        
         if segue.identifier == "showMenu" {
             let sourceViewController = segue.sourceViewController as! MainViewController
             let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.Dark)
